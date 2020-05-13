@@ -31,7 +31,7 @@ export default function(hljs) {
         className: 'number',
         variants: [
           // Hex number in $,%
-          { begin: '\\b(?:$[0-9A-Fa-f]*|%[01]*)\\b', relevance: 0 },
+          { begin: '\\b(?:$[0-9A-Fa-f][0-9A-Fa-f]*|%[01][01]*)\\b', relevance: 0 },
 
           // Number in H suffix
           { begin: '\\[0-9A-Fa-f][0-9A-Fa-f_]*[Hh]' },
