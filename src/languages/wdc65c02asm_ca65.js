@@ -30,11 +30,17 @@ export default function(hljs) {
       {
         className: 'number',
         variants: [
-          // Hex number in $,%
-          { begin: '\\b(?:$[0-9A-Fa-f][0-9A-Fa-f]*|%[01][01]*)\\b', relevance: 0 },
+          // Decimal number
+          { begin: '#?[0-9][0-9]*', relevance: 0 },
+
+          // Hex number in $
+          { begin: '#?\\$[0-9A-Fa-f][0-9A-Fa-f]*', relevance: 0 },
+
+          // Binary number in %
+          { begin: '#?\\%[01][01]*', relevance: 0 },
 
           // Number in H suffix
-          { begin: '\\[0-9A-Fa-f][0-9A-Fa-f_]*[Hh]' },
+          { begin: '#?\\[0-9A-Fa-f][0-9A-Fa-f_]*[Hh]', relevance: 0 },
         ]
       },
       // Double quote string
